@@ -3,6 +3,7 @@
   "displayName": "2n Script Runner",
   "description": "Run 2n Script files from VSCode",
   "version": "0.1.0",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.70.0"
   },
