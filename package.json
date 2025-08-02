@@ -3,6 +3,7 @@
   "displayName": "2n Script Runner",
   "description": "Run 2n Script files from VSCode",
   "version": "0.1.0",
+  "publisher": "tk2539",
   "icon": "icon.png",
   "engines": {
     "vscode": "^1.70.0"
@@ -21,18 +22,15 @@
     "out",
     "src",
     "syntaxes",
-    "language-configuration.json"
+    "language-configuration.json",
+    "icon.png"
   ],
   "contributes": {
     "languages": [
       {
         "id": "2n",
-        "aliases": [
-          "2n Script"
-        ],
-        "extensions": [
-          ".2n"
-        ],
+        "aliases": ["2n Script"],
+        "extensions": [".2n"],
         "configuration": "./language-configuration.json"
       }
     ],
@@ -52,6 +50,12 @@
       ]
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tk2539/2n-vscode-extension"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/tk2539/2n-vscode-extension",
   "scripts": {
     "vscode:prepublish": "npx esbuild src/extension.ts --bundle --outfile=out/extension.js --platform=node --external:vscode"
   },
