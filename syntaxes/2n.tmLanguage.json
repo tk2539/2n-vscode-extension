@@ -1,0 +1,13 @@
+{
+  "scopeName": "source.2n",
+  "patterns": [
+    {
+      "match": "\b(input|output|print|addlist|getlist|action|function|if|else if|else|while|for|break|import\.2n|import\.json|operation)\b",
+      "name": "keyword.control.2n"
+    },
+    {
+      "match": "\".*?\"",
+      "name": "string.quoted.double.2n"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "name": "2n-script-runner",
+  "displayName": "2n Script Runner",
+  "description": "Run 2n Script files from VSCode",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:2n"
+  ],
+  "main": "./out/extension.js",
+  "files": [
+    "main.py",
+    "out",
+    "src",
+    "syntaxes",
+    "language-configuration.json"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "2n",
+        "aliases": [
+          "2n Script"
+        ],
+        "extensions": [
+          ".2n"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "2n-script-runner.runFile",
+        "title": "Run 2n Script"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "2n-script-runner.runFile",
+          "when": "resourceLangId == 2n",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npx esbuild src/extension.ts --bundle --outfile=out/extension.js --platform=node --external:vscode"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.0",
+    "@types/vscode": "^1.70.0"
+  }
+}
