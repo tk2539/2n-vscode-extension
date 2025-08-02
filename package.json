@@ -15,6 +15,8 @@
   "main": "./out/extension.js",
   "files": [
     "main.py",
+    "README.md",
+    "LICENSE.md",
     "out",
     "src",
     "syntaxes",
